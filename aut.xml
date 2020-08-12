@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<?xml-stylesheet type="text/css" href="hello.css"?>
+
+<hostel>
+	<part>
+		<trustees>Virendra Patel</trustees>
+		<chairmen>Ketan Kamath</chairmen>
+		<owners>Harsh Singh</owners>
+	</part>
+	<part>
+		<trustees>Santosh Pavagi</trustees>
+		<chairmen>Arjuna Ojha</chairmen>
+		<owners>Vikas Barigai</owners>
+	</part>	
+	<part>
+		<trustees>Daulatram Kumar</trustees>
+		<chairmen>Vrikodara Ahuja</chairmen>
+		<owners>Rajesh Arora</owners>
+	</part>
+</hostel>

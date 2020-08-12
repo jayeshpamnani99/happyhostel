@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="index.css">
+<title>
+      Happy Hostel - More Than Just A Place To Sleep!
+</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175208042-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175208042-2');
+</script>
+
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    
+    <h2 style="font-size:50px">Happy Hostel</h2>
+    <h3>More Than Just A Place To Sleep!</h3>
+    <marquee id="mar">Defying the Quote: There is no place like Home.</marquee>
+
+  </div>
+</div>
+
+<div class="nav-bar" id="nav-bar-list" >
+      
+      </div>
+      
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="authorities.html">Authority</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+
+<div class="poem-background-class" id="poem-id">
+  <div class="poet">
+      <img src="img_home/BenLerner.jpg" height=130% width=130%>
+  </div>
+  <div>
+      <p> <br>A place where we learn lot of things,<br> And how to conduct ourselves.<br>
+
+We are not alone or lonely,<br> More students to give company and love.<br> Far away from parents,<br> Feel home sick,<br> Nothing to be worried of.<br>
+
+understand anything,<br> The teachers will help.<br> Make us study well,<br> and learn How to stand on our own legs.<br> It is a home away from home.<br>
+<br>
+
+<b>~Ben Lerner</b>
+    </p>
+  </div>
+    
+
+
+    
+</div>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1/4</div>
+  <img src="img_home/zero.jpg" style="width:100%">
+  <div class="text" >Happy Hostel</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="img_home/first.jpg" style="width:100%">
+  <div class="text">Rooms #1</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="img_home/second.jpg" style="width:100%">
+  <div class="text">Common Room</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="img_home/third.jpg" style="width:100%">
+  <div class="text">Rooms #2</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Authorities</title>
+
+	<style type="text/css">
+		table{
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>
+		XML HTTP REQUEST OBJECT TO SEE THE AUTHORITIES
+	</h1>
+
+	<button onclick="load()">Click To See The Authorities</button>
+
+<br><br>
+
+	<div id="data"></div>
+<br><br>
+
+	<script type="text/javascript">
+		function load()
+		{
+			var xhttp = new XMLHttpRequest();
+
+			xhttp.onreadystatechange = function()
+			{
+				if(this.status==200 && this.readyState==4)
+
+				{
+			
+			var fruits = this.responseXML.getElementsByTagName('part');
+			var txt = "<table border=3><tr><th>Trustees</th><th>Chairmen</th><th>Owners</th></tr>";
+			
+			for(var i=0;i<fruits.length;i++){
+				var name = fruits[i].getElementsByTagName("trustees")[0].innerHTML;
+				var ch = fruits[i].getElementsByTagName("chairmen")[0].innerHTML;
+				var own = fruits[i].getElementsByTagName("owners")[0].innerHTML;
+			
+				txt+="<tr>";
+				txt+="<td>";
+				txt+=name;
+				txt+="</td>";
+				txt+="<td>";
+				txt+=ch;
+				txt+="</td>";
+				txt+="<td>";
+				txt+=own;
+				txt+="</td>";
+				txt+="</tr>";
+			}
+			txt+="</table>"
+			document.getElementById('data').innerHTML=txt;
+			
+		}
+		
+	}
+	xhttp.open("GET",
+			"aut.xml",
+			true
+		);
+
+	xhttp.send();
+}
+
+	</script>
+
+</body>
+</html>

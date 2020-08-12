@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Technical Error Form</title>
+
+<style type="text/css">
+  body{
+  width: 100%;
+  height: 100%;
+  background-color: #708faf;
+}
+ul {
+  padding:0;
+  margin:0;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  }
+
+li{
+  
+  margin-left: 2px;
+}
+
+li a{
+  font-family: monospace;
+  display: block;
+  padding: 10px 3px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border: 2px ridge white;
+  
+}
+
+li a:hover{
+  background-color: #463075;
+}
+
+h2{
+  text-align: center;
+}
+
+.form{
+width:55%;
+text-align:center;
+border-radius:20px;
+box-shadow:0px 0px 50px 2px black;
+padding:10px;
+margin-left: 68mm;
+background-color: white;
+border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+.form:hover{
+box-shadow:0px 0px 48px 15px black;
+}
+
+
+
+input[type=submit] {
+ 
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email]
+{
+  width: 45%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ margin-left: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  width: 500px;
+
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.marquee{
+    color: orange;
+}
+
+</style>
+
+<script type="text/javascript">
+  
+function validation()
+   {
+    var fname = document.myform.fname; 
+    var lname = document.myform.lname;    
+    var email = document.myform.email;
+    var phone = document.myform.phone;
+    var ex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+    var page = document.myform.PageS;
+    
+    var code = document.myform.password; 
+    var message = document.myform.address; 
+    if (fname.value == "") 
+     { 
+     window.alert("Please enter your first name."); 
+      fname.focus(); 
+      return false; 
+  } 
+    if (lname.value == "") 
+    { 
+          window.alert("Please enter your last name."); 
+      lname.focus(); 
+            return false; 
+         } 
+    if (phone.value == "") 
+         { 
+          window.alert("Please enter your telephone number."); 
+      phone.focus(); 
+      return false; 
+      }
+    if (!phone.length == 10) 
+      { 
+        window.alert("Enter a valid telephone number.");
+        phone.focus();
+        return false; 
+      }
+       
+
+   
+    if (email.value == "") 
+     { 
+      window.alert("Please enter a valid e-mail address."); 
+       email.focus(); 
+        return false; 
+     } 
+  
+    
+  if (!ex.test(email.value))
+       {
+        alert("You have entered an invalid email address!");
+         email.focus();
+         return false;
+       }
+    
+  
+  
+  if (message.value == "") 
+    { 
+    window.alert("Please enter the address."); 
+
+    return false; 
+    } 
+
+    
+    else
+    {
+
+    return true;
+  }
+}
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175208042-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175208042-2');
+</script>
+
+
+
+</head>
+<body style="text-align:center; font-family:cambira; font-size:120%">
+
+<div class="LogoNav" style="background-color: black">
+  		<img src="hh_logo.jpg" height="170px" width="450px">
+  	</div>
+    <div class="nav-bar" id="nav-bar-list" >
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="authorities.html">Authority</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+
+<br><br>
+<marquee class="marquee"> Welcome To The Technical Team Support Page </marquee>
+<br><br>
+
+<div>
+<form target="_self" name="myform" method="post" onsubmit="return validation()" class="form"><b>
+<fieldset>
+<legend>Technical Error Form:</legend>
+First Name:<br>
+<input type="text" name="fname" placeholder="Shane"><br>
+Last Name:<br>
+<input type="text" name="lname" placeholder="Duffy"><br>
+Contact Number:<input type="text" name="phone" placeholder="##########"><br><br>
+
+E-mail:<br>
+<input type="email" name="email" placeholder="asbc@qwerty.com"><br>
+<br><label for="page">Page</label>
+    <br>
+    <select id="page" name="PageS" style="width: 300px;" "height: 100px">
+      
+      <option value="home">HOME</option>
+      <option value="about us">ABOUT US</option>
+      <option value="gallery">GALLERY</option>
+      <option value="rules">RULES</option>
+      <option value="facility">FACILITIES</option>
+    </select>
+
+    <br><br>
+    <label for="subject">Tell Us Where did we go wrong...</label><br><br>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"></textarea>
+        <br>
+<br>  <input type="submit" value="Submit">
+
+</fieldset></b>
+
+</form>
+</div>
+<br>
+<marquee class="marquee"> Thank You For Helping Us!</marquee>
+</body>
+</html>
+
